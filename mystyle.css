@@ -6,4 +6,31 @@ h1 {
     color: navy;
     margin-left: 20px;
   }
-  
+
+li.bulbasaur {
+    background-color: chartreuse;
+  }
+
+li.Charmander {
+    background-color: coral;
+  }
+
+li.Squirtle {
+    background-color:cornflowerblue;
+  }
+
+li.Caterpie {
+    background-color:darkgreen;
+  }
+
+li.Weedle {
+    background-color:yellow;
+  }
+
+li.Pidgey {
+    background-color:skyblue;
+  }
+
+li.Rattata {
+    background-color:brown;
+  }
