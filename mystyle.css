@@ -1,5 +1,5 @@
 body {
-    background-color: lightblue;
+    background-color: white;
   }
   
 h1 {
@@ -7,34 +7,68 @@ h1 {
     margin-left: 20px;
   }
 
+
+
 li {
     list-style-type: none;
+    float: left;
 }
 
-li.bulbasaur {
-    background-color: chartreuse;
-  }
+p.number{
+    font-size: 25px;
+    color: gray;
+    text-align: start;
+}
 
-li.Charmander {
-    background-color: coral;
-  }
+p.pokemonname{
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 2px;
+}
 
-li.Squirtle {
+span.grass {
+    background-color: lightgreen;
+    border-radius: 3px;
+    text-align: center;
+}
+
+span.poison{
+    background-color:violet;
+    border-radius: 3px;
+    text-align: center;
+    color: white;
+}
+
+span.fire{
+    background-color:firebrick;
+    border-radius: 3px;
+    text-align: center;
+    color: white;
+}
+
+span.flying{
+    background-color:lightblue;
+    background: linear-gradient(180deg,lightblue 50%,grey 50%);
+    border-radius: 3px;
+    text-align: center;
+}
+
+span.water{
     background-color:cornflowerblue;
-  }
+    border-radius: 3px;
+    text-align: center;
+    color: white;
+}
 
-li.Caterpie {
-    background-color:darkgreen;
-  }
+span.bug{
+    background-color:yellowgreen;
+    border-radius: 3px;
+    text-align: center;
+    color: white;
+}
 
-li.Weedle {
-    background-color:yellow;
-  }
-
-li.Pidgey {
-    background-color:skyblue;
-  }
-
-li.Rattata {
-    background-color:brown;
-  }
+span.normal{
+    background-color:slategrey;
+    border-radius: 3px;
+    text-align: center;
+}
