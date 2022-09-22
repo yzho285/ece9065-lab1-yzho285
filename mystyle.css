@@ -8,11 +8,11 @@ h1 {
   }
 
 
-
-li {
+  li {
     list-style-type: none;
-    float: left;
+    display: inline-block;
 }
+
 
 p.number{
     font-size: 25px;
@@ -73,4 +73,7 @@ span.normal{
     text-align: center;
 }
 
+p.base {
+    font-size: 10px;
+}
 
