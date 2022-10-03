@@ -145,5 +145,59 @@ function dynamicSearchByNumber(){
 }
 
 function dynamicSearchByChar(){
+  const divelement = document.getElementById("div1");
+  const ul = document.getElementById("search");
+  divelement.removeChild(ul);
+  const createul = document.createElement("ul");
+  createul.id = "search";
+  createul.className = "search";
+  divelement.appendChild(createul);
+  var inputChar = document.getElementById("myInputChar").value;
+  var numberArrayStrChar;
+  for(i=0;i<20;i++){ 
+    numberArrayStrChar = pokemonArray[i].name;
+    numberArrayStr = pokemonArray[i].number;
+    if(numberArrayStrChar.toLowerCase().includes(inputChar.toLowerCase())&&(inputChar!="")){
+      const lielement = document.createElement("li");
+      const imgelement = document.createElement("img");
+      var imgname= i + 1;
+      var imgsrc= "Lab1-pokemon-images\\pokemon\\" + imgname + ".png";
+      imgelement.src = imgsrc;
+      lielement.appendChild(imgelement);                       //add img element to li element
+      const numberelement = document.createElement("p");
+      const numbertext = document.createTextNode(numberArrayStr);
+      numberelement.className = "number";
+      numberelement.appendChild(numbertext);
+      lielement.appendChild(numberelement);
+      const nameElement = document.createElement("p");
+      const nameValue = document.createTextNode(pokemonArray[i].name);
+      nameElement.className = "pokemonname";
+      nameElement.appendChild(nameValue);
+      lielement.appendChild(nameElement);
+      pokemonType = pokemonArray[i].typeCombo.split(" / ");
+      for(j=0;j<(pokemonType.length);j++){
+        const typeElement = document.createElement("span");
+        const typeElementValue = document.createTextNode(pokemonType[j]);
+        typeElement.className = pokemonType[j].toLowerCase();
+        typeElement.appendChild(typeElementValue);
+        lielement.appendChild(typeElement);                    //add span element for type to li element
+      }
+      const atkElement = document.createElement("p");
+      const atkValue = document.createTextNode("baseATK:"+pokemonArray[i].baseATK);
+      atkElement.className = "base";
+      atkElement.appendChild(atkValue);
+      lielement.appendChild(atkElement);
+      const defElement = document.createElement("p");
+      const defValue = document.createTextNode("baseDEF:"+pokemonArray[i].baseDEF);
+      defElement.className = "base";
+      defElement.appendChild(defValue);
+      lielement.appendChild(defElement);
+
+
+      const ulelement = document.getElementById("search");
+      ulelement.appendChild(lielement);
+    }
+        
+  }
 
 }
