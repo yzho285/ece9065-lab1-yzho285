@@ -157,7 +157,7 @@ function dynamicSearchByChar(){                                //search box for 
   for(i=0;i<20;i++){ 
     numberArrayStrChar = pokemonArray[i].name;
     numberArrayStr = pokemonArray[i].number;
-    if(numberArrayStrChar.toLowerCase().includes(inputChar.toLowerCase())&&(inputChar!="")){
+    if(numberArrayStrChar.toLowerCase().includes(inputChar.toLowerCase())&&(inputChar!="")){   //if logic differs from number function
       const lielement = document.createElement("li");
       const imgelement = document.createElement("img");
       var imgname= i + 1;
