@@ -94,6 +94,7 @@ function dynamicSearchByNumber(){
   divelement.removeChild(ul);
   const createul = document.createElement("ul");
   createul.id = "search";
+  createul.className = "search";
   divelement.appendChild(createul);
   const numberArray = ["001","002","003","004","005","006","007","008","009","010","011","012","013","014","015","016","017","018","019","020"]
   var inputNum = document.getElementById("myInputNum").value;
@@ -107,6 +108,11 @@ function dynamicSearchByNumber(){
       var imgsrc= "Lab1-pokemon-images\\pokemon\\" + imgname + ".png";
       imgelement.src = imgsrc;
       lielement.appendChild(imgelement);
+      const numberelement = document.createElement("p");
+      const numbertext = document.createTextNode(numberArrayStr);
+      numberelement.className = "number";
+      numberelement.appendChild(numbertext);
+      lielement.appendChild(numberelement);
       const ulelement = document.getElementById("search");
       ulelement.appendChild(lielement);
 
