@@ -113,6 +113,18 @@ function dynamicSearchByNumber(){
       numberelement.className = "number";
       numberelement.appendChild(numbertext);
       lielement.appendChild(numberelement);
+      pokemonType = pokemonArray[i].typeCombo.split(" / ");
+      console.log(pokemonType);
+      for(j=0;j<(pokemonType.length);j++){
+        const typeElement = document.createElement("span");
+        const typeElementValue = document.createTextNode(pokemonType[j]);
+        typeElement.className = pokemonType[j].toLowerCase();
+        console.log(typeElement.className);
+        typeElement.appendChild(typeElementValue);
+        lielement.appendChild(typeElement);
+      }
+
+
       const ulelement = document.getElementById("search");
       ulelement.appendChild(lielement);
 
