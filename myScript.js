@@ -52,8 +52,6 @@ function myFunction() {
         }else if (j>=5){
             break;
         }
-        
-        
       }
       alert(pokemonDescription);
     }
@@ -79,8 +77,6 @@ function myFunctionChar(){
         }else if (j>=5){
             break;
         }
-        
-        
       }
       alert(pokemonDescriptionChar);
     }
@@ -134,8 +130,6 @@ function dynamicSearchByNumber(){
       defElement.className = "base";
       defElement.appendChild(defValue);                        
       lielement.appendChild(defElement);                       //add def description
-
-
       const ulelement = document.getElementById("search");
       ulelement.appendChild(lielement);                        //add all search result to ul
 
@@ -192,8 +186,6 @@ function dynamicSearchByChar(){                                //search box for 
       defElement.className = "base";
       defElement.appendChild(defValue);
       lielement.appendChild(defElement);
-
-
       const ulelement = document.getElementById("search");
       ulelement.appendChild(lielement);
     }
