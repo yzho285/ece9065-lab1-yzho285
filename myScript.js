@@ -101,7 +101,7 @@ function dynamicSearchByNumber(){
   var numberArrayStr;
   for(i=0;i<20;i++){
     numberArrayStr = pokemonArray[i].number;
-    if(numberArrayStr.includes(inputNum)){
+    if(numberArrayStr.includes(inputNum)&&(inputNum!="")){
       const lielement = document.createElement("li");
       const imgelement = document.createElement("img");
       var imgname= i + 1;
@@ -114,12 +114,12 @@ function dynamicSearchByNumber(){
       numberelement.appendChild(numbertext);
       lielement.appendChild(numberelement);
       pokemonType = pokemonArray[i].typeCombo.split(" / ");
-      console.log(pokemonType);
+      //console.log(pokemonType);
       for(j=0;j<(pokemonType.length);j++){
         const typeElement = document.createElement("span");
         const typeElementValue = document.createTextNode(pokemonType[j]);
         typeElement.className = pokemonType[j].toLowerCase();
-        console.log(typeElement.className);
+        //console.log(typeElement.className);
         typeElement.appendChild(typeElementValue);
         lielement.appendChild(typeElement);
       }
