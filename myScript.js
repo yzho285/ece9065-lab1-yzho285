@@ -34,7 +34,6 @@ const pokemonArray = [Bulbasaur,Ivysaur,Venusaur,Charmander,Charmeleon,Charizard
 
 
 function myFunction() {
-    const numberArray = ["001","002","003","004","005","006","007","008","009","010","011","012","013","014","015","016","017","018","019","020"]
     var inputNum = document.getElementById("myInputNum").value;
     isnumber = isNaN(inputNum);
     if (isnumber||inputNum<1||inputNum>20) {
@@ -96,7 +95,6 @@ function dynamicSearchByNumber(){
   createul.id = "search";
   createul.className = "search";
   divelement.appendChild(createul);
-  const numberArray = ["001","002","003","004","005","006","007","008","009","010","011","012","013","014","015","016","017","018","019","020"]
   var inputNum = document.getElementById("myInputNum").value;
   var numberArrayStr;
   for(i=0;i<20;i++){
@@ -107,22 +105,35 @@ function dynamicSearchByNumber(){
       var imgname= i + 1;
       var imgsrc= "Lab1-pokemon-images\\pokemon\\" + imgname + ".png";
       imgelement.src = imgsrc;
-      lielement.appendChild(imgelement);
+      lielement.appendChild(imgelement);                       //add img element to li element
       const numberelement = document.createElement("p");
       const numbertext = document.createTextNode(numberArrayStr);
       numberelement.className = "number";
       numberelement.appendChild(numbertext);
       lielement.appendChild(numberelement);
+      const nameElement = document.createElement("p");
+      const nameValue = document.createTextNode(pokemonArray[i].name);
+      nameElement.className = "pokemonname";
+      nameElement.appendChild(nameValue);
+      lielement.appendChild(nameElement);
       pokemonType = pokemonArray[i].typeCombo.split(" / ");
-      //console.log(pokemonType);
       for(j=0;j<(pokemonType.length);j++){
         const typeElement = document.createElement("span");
         const typeElementValue = document.createTextNode(pokemonType[j]);
         typeElement.className = pokemonType[j].toLowerCase();
-        //console.log(typeElement.className);
         typeElement.appendChild(typeElementValue);
-        lielement.appendChild(typeElement);
+        lielement.appendChild(typeElement);                    //add span element for type to li element
       }
+      const atkElement = document.createElement("p");
+      const atkValue = document.createTextNode("baseATK:"+pokemonArray[i].baseATK);
+      atkElement.className = "base";
+      atkElement.appendChild(atkValue);
+      lielement.appendChild(atkElement);
+      const defElement = document.createElement("p");
+      const defValue = document.createTextNode("baseDEF:"+pokemonArray[i].baseDEF);
+      defElement.className = "base";
+      defElement.appendChild(defValue);
+      lielement.appendChild(defElement);
 
 
       const ulelement = document.getElementById("search");
