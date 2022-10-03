@@ -11,10 +11,16 @@
 <!-- Place your content here -->
 <h1>Pokédex</h1>
 
-<input type="text" id="myInputNum" placeholder="search..."><!-- input to search by number-->
+<input type="text" id="myInputNum" placeholder="search..." oninput="dynamicSearchByNumber()"><!-- input to search by number-->
 <button onclick="myFunction()">Search by number</button>
-<input type="text" id="myInputChar" placeholder="search..."><!-- input to search by Char-->
+<input type="text" id="myInputChar" placeholder="search..." oninput="dynamicSearchByChar()"><!-- input to search by Char-->
 <button onclick="myFunctionChar()">Search by Character</button>
+
+<div id="div1">
+    <ul id="search">
+
+    </ul>
+</div>
 
 <ul><!-- a list showing images -->
     <li class="bulbasaur" id="bulbasaur">
