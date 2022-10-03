@@ -84,9 +84,15 @@ function myFunctionChar(){
 
 
 function dynamicSearchByNumber(){
+  const div1 = document.getElementById("div1");
+  if(div1!=null){
+    document.body.removeChild(div1);                            //when input changes,remove all the elements
+  }
+  const addDiv = document.createElement("div");
+  addDiv.id = "div1";
+  const getUl = document.getElementById("ul1");
+  document.body.insertBefore(addDiv,getUl);
   const divelement = document.getElementById("div1");
-  const ul = document.getElementById("search");
-  divelement.removeChild(ul);                                  //when input changes,remove all the elements
   const createul = document.createElement("ul");               
   createul.id = "search";
   createul.className = "search";
@@ -139,13 +145,19 @@ function dynamicSearchByNumber(){
 }
 
 function dynamicSearchByChar(){                                //search box for charactor is similar to that for number
+  const div1 = document.getElementById("div1");
+  if(div1!=null){
+    document.body.removeChild(div1);                           //when input changes,remove all the elements
+  }
+  const addDiv = document.createElement("div");
+  addDiv.id = "div1";
+  const getUl = document.getElementById("ul1");
+  document.body.insertBefore(addDiv,getUl);
   const divelement = document.getElementById("div1");
-  const ul = document.getElementById("search");
-  divelement.removeChild(ul);
-  const createul = document.createElement("ul");
+  const createul = document.createElement("ul");               
   createul.id = "search";
   createul.className = "search";
-  divelement.appendChild(createul);
+  divelement.appendChild(createul);                            //create a list for result
   var inputChar = document.getElementById("myInputChar").value;
   var numberArrayStrChar;
   for(i=0;i<20;i++){ 
