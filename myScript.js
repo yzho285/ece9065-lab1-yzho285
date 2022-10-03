@@ -90,11 +90,11 @@ function myFunctionChar(){
 function dynamicSearchByNumber(){
   const divelement = document.getElementById("div1");
   const ul = document.getElementById("search");
-  divelement.removeChild(ul);
-  const createul = document.createElement("ul");
+  divelement.removeChild(ul);                                  //when input changes,remove all the elements
+  const createul = document.createElement("ul");               
   createul.id = "search";
   createul.className = "search";
-  divelement.appendChild(createul);
+  divelement.appendChild(createul);                            //create a list for result
   var inputNum = document.getElementById("myInputNum").value;
   var numberArrayStr;
   for(i=0;i<20;i++){
@@ -103,7 +103,7 @@ function dynamicSearchByNumber(){
       const lielement = document.createElement("li");
       const imgelement = document.createElement("img");
       var imgname= i + 1;
-      var imgsrc= "Lab1-pokemon-images\\pokemon\\" + imgname + ".png";
+      var imgsrc= "Lab1-pokemon-images\\pokemon\\" + imgname + ".png";  //set the img path
       imgelement.src = imgsrc;
       lielement.appendChild(imgelement);                       //add img element to li element
       const numberelement = document.createElement("p");
@@ -115,7 +115,7 @@ function dynamicSearchByNumber(){
       const nameValue = document.createTextNode(pokemonArray[i].name);
       nameElement.className = "pokemonname";
       nameElement.appendChild(nameValue);
-      lielement.appendChild(nameElement);
+      lielement.appendChild(nameElement);                      //add name description
       pokemonType = pokemonArray[i].typeCombo.split(" / ");
       for(j=0;j<(pokemonType.length);j++){
         const typeElement = document.createElement("span");
@@ -128,23 +128,23 @@ function dynamicSearchByNumber(){
       const atkValue = document.createTextNode("baseATK:"+pokemonArray[i].baseATK);
       atkElement.className = "base";
       atkElement.appendChild(atkValue);
-      lielement.appendChild(atkElement);
+      lielement.appendChild(atkElement);                       //add atk description
       const defElement = document.createElement("p");
       const defValue = document.createTextNode("baseDEF:"+pokemonArray[i].baseDEF);
       defElement.className = "base";
-      defElement.appendChild(defValue);
-      lielement.appendChild(defElement);
+      defElement.appendChild(defValue);                        
+      lielement.appendChild(defElement);                       //add def description
 
 
       const ulelement = document.getElementById("search");
-      ulelement.appendChild(lielement);
+      ulelement.appendChild(lielement);                        //add all search result to ul
 
       
     }
   }
 }
 
-function dynamicSearchByChar(){
+function dynamicSearchByChar(){                                //search box for charactor is similar to that for number
   const divelement = document.getElementById("div1");
   const ul = document.getElementById("search");
   divelement.removeChild(ul);
